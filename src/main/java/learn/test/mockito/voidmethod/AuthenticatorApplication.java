@@ -1,4 +1,4 @@
-package learn.test.mockito;
+package learn.test.mockito.voidmethod;
 
 public class AuthenticatorApplication {
 
@@ -8,8 +8,8 @@ public class AuthenticatorApplication {
 		this.authenticator = authenticator;
 	}
 
-	public boolean authenticate(String username, String password) throws EmptyCredentialsException {
+	public void authenticate(String username, String password) throws NotAuthenticatedException {
 		authenticator.foo();
-		return this.authenticator.authenticateUser(username, password);
+		 this.authenticator.authenticateUser(username, password);
 	}
 }

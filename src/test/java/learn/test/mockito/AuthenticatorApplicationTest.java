@@ -46,7 +46,7 @@ public class AuthenticatorApplicationTest {
 	public void testException() throws EmptyCredentialsException {
 		when(authenticatorMock.authenticateUser(username, "")).thenThrow(new EmptyCredentialsException());
 	
-		authenticator.authenticate("", "");
+		authenticator.authenticate(username, "");
 	}
 
 }
